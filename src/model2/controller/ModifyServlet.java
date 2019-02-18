@@ -17,6 +17,7 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "ModifyServlet")
 public class ModifyServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         QuestionServiceInterface questionService = new QuestionService();
         int id=Integer.parseInt(request.getParameter("ID"));
@@ -32,7 +33,7 @@ public class ModifyServlet extends HttpServlet {
 
 
     }
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
         doPost(request, response);

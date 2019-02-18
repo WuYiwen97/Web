@@ -20,6 +20,7 @@ public class QuestionService implements QuestionServiceInterface{
 
 
     //添加题目
+    @Override
     public void addQuestion(String qustionname, String answer1, String answer2, String rightanswer) {
         questionDao.addQuestion(qustionname,answer1,answer2,rightanswer);
     }
